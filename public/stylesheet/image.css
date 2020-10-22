@@ -57,9 +57,9 @@ body{
 	overflow: hidden;
 }
 .card:hover{
-	box-shadow: 0px 4px 3px #686868,
-                 0px 8px 13px #686868,
-                 0px 4px 3px #686868;
+	box-shadow: 0px 4px 3px black,
+                 0px 8px 13px black,
+                 0px 4px 9px #908e8e;
 	transition: 0.4s;
 }
 .card img{
@@ -77,13 +77,19 @@ body{
 	background-color: #fef9c7;
 	border: none;
 }
+.jumbotron {
+    padding: 2rem 2rem;
+}
 .card:hover img {
 	transform: scale(1.03);
 	cursor: pointer;
 	 transition: 0.6s;
 }
-.jumbotron h1, h6{
+.jumbotron h1, h4{
 	color: #026670;
+}
+h4{
+	text-align:end;
 }
 
 .show {
@@ -184,12 +190,16 @@ body{
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
+	padding-right:10px;
+	
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: transparent; 
+	
+	padding-right:10px;
 }
  
 /* Handle */
