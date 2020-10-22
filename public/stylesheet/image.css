@@ -122,6 +122,9 @@ h4{
 	color: #026670;
 }
 @media screen and (max-width: 650px) {
+	.jumbotron h1{
+		font-size: 2.1rem;
+	}
 	.card img{
 		max-width: 100%;
 		height: 300px;
