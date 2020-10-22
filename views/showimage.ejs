@@ -1,0 +1,15 @@
+<%- include("./partials/header") %>
+
+<div class = "container">
+		<img class = "img-thumbnail" src = "<%= image.image %>">
+		<div class = "card-body">
+			<span><%= image.created.toDateString() %></span>
+			<p><%= image.description %></p>
+		</div>
+		<a  class = "btn btn-warning" href = "/images/<%= image._id %>/edit">EDIT</a>
+		<form id = "delete" action = "/images/<%= image._id %>?_method=DELETE" method = "POST">
+			<button class = "btn btn-danger" onclick = "return (confirm('Want to delete'))">DELETE</button>
+		</form>
+		<a href="/images">Go Back</a>
+
+<%- include("./partials/footer") %>
