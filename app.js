@@ -20,7 +20,7 @@ var imageRoutes = require("./routes/images"),
 mongoose.Promise = global.Promise;
 mongoose.set('useFindAndModify', false);
 var dbURl = process.env.DATABASEURL || "mongodb://localhost/restful_blog_app"     //DATABASE
-mongoose.connect(dbURl, {
+mongoose.connect(process.env.DATABASEURL, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
