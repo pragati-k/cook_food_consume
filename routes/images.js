@@ -27,13 +27,25 @@ cloudinary.config({
 
 //INDEX route
 router.get("/images", function(req, res){
-	Image.find({}, function(err, images){
-		if(err){
-			console.log("errorr");
-		}else {
-			res.render("images", {image:images});
-		}
-	});
+	if(req.query.search){
+		const regex = new RegExp(escapeRegex(req.query.search), 'gi');
+		Image.find({description: regex}, function(err, images){
+			if(err){
+				console.log("errorr");
+			}else {
+				res.render("images", {image:images});
+			}
+		});	
+	}else{
+		Image.find({}, function(err, images){
+			if(err){
+				console.log("errorr");
+			}else {
+				res.render("images", {image:images});
+			}
+		});	
+	}
+
 });
 
 //NEW ROUTE
@@ -134,5 +146,11 @@ function isLoggedIn(req, res, next){
 	}
 	res.redirect("back");
 }
+
+//FUZZY SEARCH
+function escapeRegex(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+};
+
 
 module.exports = router;

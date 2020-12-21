@@ -23,12 +23,12 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="/">Home</a>
     <a href="/images">Photos</a>
+	 <a href="/about">About us</a>
     <% if(currentUser){ %>
     <a href="/images/newimage">New Image Post</a>
     <a href="/logout">Logout</a>
-    <a href="/about">About Us</a>
     <% } else {%>
-    <a href="/about">About us</a>
+	<a href="/login">Login ( Adims only)</a>
     <% } %>
   </div>
   <!-- Use any element to open the sidenav -->
@@ -37,13 +37,41 @@
  
 	<div id = "first" class="container">
       <div class="jumbotron">
+		  <div class="jumbotron one">
         <h1><i class="fas fa-mug-hot fa-lg"></i> OUR F<i class="fas fa-cookie fa-xs"></i><i class="fas fa-cookie-bite fa-xs"></i>D GALLERY</h1>
         <h4>- "Mom-made food that we clicked"</h4>
+		  </div>	  
       </div>
-      <div class="row popup">
+		
+		<!-- Back to top button -->
+		<a id="button"><i class="fas fa-angle-up"></i></a>
+		
+		<div class = "row">
+			<div class = " float-right col-6">
+				<form action="/images" method="GET" class= "form-inline">
+					<div class ="form-group">
+						<input type="text" name="search" placeholder="Search..." class="form-control searchbar">
+						<input type="submit" value= class="fas fa-search">
+					</div>
+				</form>
+			</div>
+			<div class= "col-6">
+				<button class=" float-right btn btn-outline-dark" 
+				    data-jplist-control="sort-buttons"
+                    data-path=".card"
+                    data-group="data-group-1"
+                    data-type="datetime"
+                    data-name="sort1"
+                    data-selected="true"
+                    data-mode="radio">
+                <i class="fas fa-sort"></i>
+            	</button>
+			</div>
+		</div>
+      <div data-jplist-group="data-group-1" class="row popup">
         <% image.forEach(function(image){ %>
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="card">
+        <div data-jplist-item class="col-lg-4 col-sm-6 mb-4">
+          <div  class="card">
             <img class="img-thumbnail" alt="<%= image.description %>" src="<%= image.image %>">
           </div>
           <% if(currentUser){ %>
@@ -72,7 +100,7 @@
       <hr>
     </div>
     <div class="containers">
-      <p class="copyright-text">cook_food_consume</p>
+      <p class="copyright-text"><a href="https://instagram.com/cook_food_consume?igshid=130divo48lc89">cook_food_consume</a></p>
     </div>
   </footer>
 
@@ -104,8 +132,28 @@
       document.getElementById("mySidenav").style.width = "0";
       document.getElementById("first").classList.remove("blur");
     }
-  </script>
+	  
+	  var btn = $('#button');
 
+	$(window).scroll(function() {
+	  if ($(window).scrollTop() > 300) {
+		btn.addClass('show');
+	  } else {
+		btn.removeClass('show');
+	  }
+	});
+
+	btn.on('click', function(e) {
+	  e.preventDefault();
+	  $('html, body').animate({scrollTop:0}, '300');
+	});
+
+
+  </script>
+	<script src="/jplist.min.js"></script>
+	<script>
+		jplist.init();
+	</script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
     crossorigin="anonymous"></script>

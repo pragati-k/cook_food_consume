@@ -23,12 +23,12 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="/">Home</a>
         <a href="/images">Photos</a>
+		<a href="/about">About Us</a>
         <% if(currentUser){ %>
         <a href="/images/newimage">New Image Post</a>
         <a href="/logout">Logout</a>
-        <a href="/about">About Us</a>
         <% } else {%>
-        <a href="/about">About Us</a>
+        <a href="/login">Login ( Adims only)</a>
         <% } %>
     </div>
     <span class="navbar-toggler" onclick="openNav()" style=" cursor: pointer"><i

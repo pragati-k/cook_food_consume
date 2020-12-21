@@ -1,21 +1,35 @@
 body{
-	background-color:#fce181;
+	background-color:#1f2833;
 	font-family: 'BioRhyme', serif;
 }
 .blur{
 	filter: blur(8px);
 }
+
+/* sort button */
+.btn-outline-dark {            
+    color: #66fcf1;
+    /* border-color: #026670; */
+	border: none;
+}
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: #026670;
+    /* border-color: #026670; */
+}
+
+/* footer */
 .site-footer
 {
-  background-color:#026670;
+  background-color:#66fcf1;
   padding:10px 0 12px;
   font-size:15px;
   line-height:24px;
-  color:#9fedd7;
+  color:#1f2833;
 }
 .site-footer hr
 {
-  border-top-color:#bbb;
+  border-top-color:#1f2833;
   opacity:0.5;
 	margin-top: 0.1rem;
 	margin-bottom: .5rem;
@@ -28,7 +42,7 @@ body{
 {
 	margin:0;
 	text-align: center;
-	color:#9fedd7;
+	color:#1f2833;
 }
 .site-footer a:hover{
 	color: #fce181;
@@ -53,6 +67,8 @@ body{
     text-align:center
   }
 }
+
+/* body */
 .card{
 	overflow: hidden;
 }
@@ -70,16 +86,26 @@ body{
 	padding: 1.5%;
 	display: inline–block;
 	object-fit: cover;
-	background-color: #fef9c7;
+	background-color: #c5c6c7;
 	border: none;
 	transform: scale(1);
 }
 .card, .img-thumbnail, .jumbotron{
-	background-color: #fef9c7;
+	background-color: #66fcf1;
 	border: none;
 }
 .jumbotron {
     padding: 2rem 2rem;
+	box-shadow: 0px 4px 3px black,
+                 0px 8px 13px black,
+                 0px 4px 9px #908e8e;
+}
+.jumbotron .one{
+	margin-bottom:0;
+	border: 3px solid #66fcf1;
+	background-color:#1f2833;
+	
+	
 }
 .card:hover img {
 	transform: scale(1.03);
@@ -87,7 +113,7 @@ body{
 	 transition: 0.6s;
 }
 .jumbotron h1, h4{
-	color: #026670;
+	color: #66fcf1;
 }
 h4{
 	text-align:end;
@@ -184,7 +210,7 @@ h4{
 	
 }
 .img-show:hover {
-	background-color: #9fedd7;
+	background-color: #66fcf1;
 	overflow-y: auto;
 }
 .img-show hr{
@@ -192,7 +218,9 @@ h4{
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); 
 }
-/* width */
+
+
+/* scrollbar width */
 ::-webkit-scrollbar {
   width: 4px;
 	padding-right:10px;
@@ -216,4 +244,56 @@ h4{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #9fedd7; 
+}
+
+
+
+#button {
+  display: inline-block;
+  background-color: #66fcf1;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+.fa-angle-up{
+	font-size: 2em;
+	line-height: 50px;
+	color: #fff;
+}
+
+.form-control{
+	width: 76%
+}
+.searchbar{
+	display: inline;
+	background: none;
+    border: none;
+    border-bottom: 1px solid #66fcf1;
+    margin-bottom: 6px;
+}
+.fas.fa-search{
+	color: #66fcf1;
+	background: none;
+	border: none;
+	font-size: larger;
 }

@@ -15,12 +15,12 @@ router.get("/about", function(req, res){
 });
 
 //LOGIN
-router.get("/pkbari", function(req, res){
+router.get("/login", function(req, res){
 	res.render("login");
 });
-router.post("/pkbari",passport.authenticate("local", {
+router.post("/login",passport.authenticate("local", {
 	successRedirect: "/images",
-	failureRedirect: "/pkbari"
+	failureRedirect: "/login"
 }), function(req, res){
 	
 });

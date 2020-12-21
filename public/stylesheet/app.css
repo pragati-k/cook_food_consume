@@ -5,7 +5,7 @@
 	z-index: 1;/* Stay on top */
 	top: 0;/* Stay at the top */
 	left: 0;
-	background-color: #026670;/* teal*/
+	background-color: #1f2833;/* teal*/
 	overflow-x: hidden;/* Disable horizontal scroll */
 	padding-top: 250px;/* Place content 60px from the top */
 	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -16,7 +16,7 @@
 	text-align: center;
     text-decoration: none;
     font-size: 25px;
-    color: #9fedd7;
+    color: #66fcf1;
     display: block;
     transition: 0.3s;
 }
@@ -66,4 +66,20 @@
 	z-index:0;
 	font-size:20px;
 	padding: 20px 20px;
+	color: #66fcf1;
+}
+.display-1{
+	color: #66fcf1;	
+	text-align: center;
+}
+.login .form-control{
+	width: 50%;
+	margin: 1% 30%;
+}
+.login .btnlogin{
+	width: 50%;
+	margin: 1% 30%;
+    color: #026670;
+    background-color: #66fcf1;
+	border: none;
 }
