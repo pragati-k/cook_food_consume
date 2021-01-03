@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cook_food_consume</title>
     <link rel="icon" href="https://res.cloudinary.com/pcloudk/image/upload/v1603092972/favicon_jaldqs.png"
@@ -15,7 +16,6 @@
     <link rel="stylesheet" href="/stylesheet/about.css">
     <link rel="stylesheet" href="/stylesheet/app.css">
 
-
 </head>
 
 <body>
@@ -25,12 +25,13 @@
         <a href="/images">Photos</a>
 		<a href="/about">About Us</a>
         <% if(currentUser){ %>
-        <a href="/images/newimage">New Image Post</a>
-        <a href="/logout">Logout</a>
+        	<a href="/images/newimage">New Image Post</a>
+        	<a href="/logout">Logout</a>
         <% } else {%>
-        <a href="/login">Login ( Adims only)</a>
+        	<a href="/login">Login ( Adims only)</a>
         <% } %>
     </div>
     <span class="navbar-toggler" onclick="openNav()" style=" cursor: pointer"><i
             class="fas fa-th-list fa-2x"></i></span>
     <div id="main">
+		

@@ -23,12 +23,12 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="/">Home</a>
     <a href="/images">Photos</a>
-	 <a href="/about">About us</a>
+	<a href="/about">About us</a>
     <% if(currentUser){ %>
-    <a href="/images/newimage">New Image Post</a>
-    <a href="/logout">Logout</a>
+    	<a href="/images/newimage">New Image Post</a>
+    	<a href="/logout">Logout</a>
     <% } else {%>
-	<a href="/login">Login ( Adims only)</a>
+		<a href="/login">Login ( Adims only)</a>
     <% } %>
   </div>
   <!-- Use any element to open the sidenav -->
@@ -38,7 +38,7 @@
 	<div id = "first" class="container">
       <div class="jumbotron">
 		  <div class="jumbotron one">
-        <h1><i class="fas fa-mug-hot fa-lg"></i> OUR F<i class="fas fa-cookie fa-xs"></i><i class="fas fa-cookie-bite fa-xs"></i>D GALLERY</h1>
+        <h1><i class="fas fa-mug-hot fa-lg"></i> OUR F<i class="fas fa-cookie fa-xs"></i><i class="fas fa-cookie-bite fa-xs">				</i>D GALLERY</h1>
         <h4>- "Mom-made food that we clicked"</h4>
 		  </div>	  
       </div>
@@ -46,7 +46,9 @@
 		<!-- Back to top button -->
 		<a id="button"><i class="fas fa-angle-up"></i></a>
 		
+		
 		<div class = "row">
+			<!-- Search Bar -->
 			<div class = " float-right col-6">
 				<form action="/images" method="GET" class= "form-inline">
 					<div class ="form-group">
@@ -55,6 +57,7 @@
 					</div>
 				</form>
 			</div>
+			<!-- Sorting button  -->
 			<div class= "col-6">
 				<button class=" float-right btn btn-outline-dark" 
 				    data-jplist-control="sort-buttons"
@@ -67,7 +70,9 @@
                 <i class="fas fa-sort"></i>
             	</button>
 			</div>
+			
 		</div>
+		
       <div data-jplist-group="data-group-1" class="row popup">
         <% image.forEach(function(image){ %>
         <div data-jplist-item class="col-lg-4 col-sm-6 mb-4">
@@ -75,11 +80,12 @@
             <img class="img-thumbnail" alt="<%= image.description %>" src="<%= image.image %>">
           </div>
           <% if(currentUser){ %>
-          <a href="/images/<%= image._id %>" class="btn btn-primary btn-sm">MORE</a>
+          	<a href="/images/<%= image._id %>" class="btn btn-primary btn-sm">MORE</a>
           <% } %>
         </div>
         <% }) %>
       </div>
+		<!-- Pop up -->
       <div class="show">
         <div class="overlay"></div>
         <div class="img-show  d-flex justify-content-center align-items-center">
@@ -100,7 +106,7 @@
       <hr>
     </div>
     <div class="containers">
-      <p class="copyright-text"><a href="https://instagram.com/cook_food_consume?igshid=130divo48lc89">cook_food_consume</a></p>
+      <p class="copyright-text"><a href="https://instagram.com/cook_food_consume?igshid=130divo48lc89">cook_food_consume</a>		</p>
     </div>
   </footer>
 

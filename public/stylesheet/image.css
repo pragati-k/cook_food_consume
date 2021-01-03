@@ -178,9 +178,12 @@ h4{
 }
 
 .img-show img {
+	max-width: 100%;
 	width: 100%;
 	height: 100%;
 	position: absolute;
+	object-fit: cover;
+	border: none;
 	top: 0;
 	left: 0;
 	transition: .5s
@@ -188,7 +191,6 @@ h4{
 
 .img-show:hover img {
 	transform: scale(0);
-	
 }
 
 .show p{
